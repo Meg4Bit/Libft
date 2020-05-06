@@ -1,18 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ametapod <pe4enko111@rambler.ru>           +#+  +:+       +#+        */
+/*   By: student <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/05/06 15:44:17 by ametapod          #+#    #+#             */
-/*   Updated: 2020/05/06 17:11:42 by student          ###   ########.fr       */
+/*   Created: 2020/05/06 16:17:21 by student           #+#    #+#             */
+/*   Updated: 2020/05/06 16:18:48 by student          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	toupper(int c)
-{
-	if (c >= 97 && c <= 122)
-		c -= 32;
-	return (c);
-}
+#ifndef LIBFT_H
+# define LIBFT_H
+
+int	ft_tolower(int c);
+int ft_toupper(int c);
+
+#endif

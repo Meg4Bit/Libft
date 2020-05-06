@@ -5,20 +5,19 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ametapod <pe4enko111@rambler.ru>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/27 23:54:15 by ametapod          #+#    #+#             */
-/*   Updated: 2020/05/06 15:19:19 by ametapod         ###   ########.fr       */
+/*   Created: 2020/05/06 20:48:15 by ametapod          #+#    #+#             */
+/*   Updated: 2020/05/06 20:48:15 by ametapod         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strlen(char *str)
+#include "libft.h"
+
+size_t strlen(const char *s)
 {
-	int num;
+	unsigned long int num;
 
 	num = 0;
-	while (*str)
-	{
-		str++;
+	while (s[num] && s[num + 1])
 		num++;
-	}
 	return (num);
 }

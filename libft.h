@@ -13,7 +13,11 @@
 #ifndef LIBFT_H
 # define LIBFT_H
 
-int	ft_tolower(int c);
-int ft_toupper(int c);
+#include <stdlib.h>
+
+int		ft_tolower(int c);
+int		ft_toupper(int c);
+char	*ft_strdup(const char *s);
+size_t	strlen(const char *s);
 
 #endif

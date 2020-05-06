@@ -6,11 +6,11 @@
 /*   By: ametapod <pe4enko111@rambler.ru>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/06 15:39:12 by ametapod          #+#    #+#             */
-/*   Updated: 2020/05/06 17:11:23 by student          ###   ########.fr       */
+/*   Updated: 2020/05/06 18:23:41 by student          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	tolower(int c)
+int	ft_tolower(int c)
 {
 	if (c >= 65 && c <= 90)
 		c += 32;

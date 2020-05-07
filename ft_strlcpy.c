@@ -6,7 +6,7 @@
 /*   By: ametapod <pe4enko111@rambler.ru>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/07 17:13:14 by ametapod          #+#    #+#             */
-/*   Updated: 2020/05/07 17:13:14 by ametapod         ###   ########.fr       */
+/*   Updated: 2020/05/07 23:00:34 by student          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,14 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	size_t i;
 
 	i = 0;
-	while (i < ft_strlen(src) && i < size)
+	if (!src)
+		return (0);
+	while (i < ft_strlen(src) && i < size - 1 && size)
 	{
 		dst[i] = src[i];
 		i++;
 	}
-	dst[i] = 0;
+	if (size)
+		dst[i] = 0;
 	return (ft_strlen(src));
 }

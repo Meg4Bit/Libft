@@ -6,14 +6,14 @@
 /*   By: student <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/06 16:17:21 by student           #+#    #+#             */
-/*   Updated: 2020/05/06 16:18:48 by student          ###   ########.fr       */
+/*   Updated: 2020/05/07 19:46:58 by student          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-#include <stdlib.h>
+# include <stdlib.h>
 
 int		ft_tolower(int c);
 int		ft_toupper(int c);

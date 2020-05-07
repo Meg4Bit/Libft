@@ -6,7 +6,7 @@
 /*   By: ametapod <pe4enko111@rambler.ru>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/07 17:44:53 by ametapod          #+#    #+#             */
-/*   Updated: 2020/05/07 17:44:53 by ametapod         ###   ########.fr       */
+/*   Updated: 2020/05/07 22:05:49 by student          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,17 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	size_t i;
-	size_t j;
-	size_t min;
+	size_t	i;
+	int		j;
+	size_t	dist;
 
 	i = ft_strlen(dst);
 	j = 0;
-	min = size;
-	if (ft_strlen(dst) < size)
-		min = ft_strlen(dst);
-	while (i < size - ft_strlen(src))
+	dist = i;
+	while (j < (int)(size - 1 - dist) && src[j])
 		dst[i++] = src[j++];
 	dst[i] = 0;
-	return (min + ft_strlen(src));
+	if (dist > size)
+		dist = size;
+	return (dist + ft_strlen(src));
 }

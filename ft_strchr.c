@@ -6,7 +6,7 @@
 /*   By: ametapod <pe4enko111@rambler.ru>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/07 18:23:11 by ametapod          #+#    #+#             */
-/*   Updated: 2020/05/07 18:23:11 by ametapod         ###   ########.fr       */
+/*   Updated: 2020/05/07 20:00:19 by student          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,17 @@
 
 char	*strchr(const char *s, int c)
 {
-	const char	*str;
+	char	*str;
 
-	str = (const char *)s;
+	str = (char *)s;
 	while (*s)
 	{
 		if (*s == c)
-			return (s);
+			return ((char *)s);
 		s++;
 	}
 	if (*s == c)
-		return (s);
+		return ((char *)s);
 	return (NULL);
 }
+

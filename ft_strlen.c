@@ -12,12 +12,12 @@
 
 #include "libft.h"
 
-size_t strlen(const char *s)
+size_t ft_strlen(const char *s)
 {
 	unsigned long int num;
 
 	num = 0;
-	while (s[num] && s[num + 1])
+	while (s[num])
 		num++;
 	return (num);
 }

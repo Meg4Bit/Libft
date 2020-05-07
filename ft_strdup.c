@@ -21,11 +21,9 @@ char	*ft_strdup(const char *s)
 	if (new_str)
 	{
 		i = 0;
-		new_str[i] = s[i];
 		while (s[i])
 			new_str[i] = s[i++];
+		new_str[i] = s[i];
 	}
-	else
-		new_str = NULL;
 	return (new_str);
 }

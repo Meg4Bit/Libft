@@ -6,7 +6,7 @@
 /*   By: ametapod <pe4enko111@rambler.ru>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/08 20:04:17 by ametapod          #+#    #+#             */
-/*   Updated: 2020/05/08 20:04:17 by ametapod         ###   ########.fr       */
+/*   Updated: 2020/05/08 21:31:31 by student          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ static int	arr_len(char const *s, char c)
 
 	count = 0;
 	if (!s)
-		return (-2);
-	while(*s)
+		return (-1);
+	while (*s)
 	{
 		if (*s != c)
 			count++;

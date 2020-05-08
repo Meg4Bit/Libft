@@ -6,7 +6,7 @@
 /*   By: ametapod <pe4enko111@rambler.ru>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/08 01:09:20 by ametapod          #+#    #+#             */
-/*   Updated: 2020/05/08 01:09:27 by ametapod         ###   ########.fr       */
+/*   Updated: 2020/05/08 15:32:11 by student          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,9 +33,9 @@ int		ft_atoi(const char *str)
 		nb *= 10;
 		nb += ((*str++ - 48) * minus);
 		if (nb > 2147483647)
-			return (2147483647);
+			return (-1);
 		else if (nb < -2147483648)
-			return (-2147483648);
+			return (0);
 	}
 	return ((int)nb);
 }

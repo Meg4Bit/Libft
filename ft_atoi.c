@@ -3,37 +3,39 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ametapod <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ametapod <pe4enko111@rambler.ru>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/02 15:15:24 by ametapod          #+#    #+#             */
-/*   Updated: 2020/03/02 19:51:27 by ametapod         ###   ########.fr       */
+/*   Created: 2020/05/08 01:09:20 by ametapod          #+#    #+#             */
+/*   Updated: 2020/05/08 01:09:27 by ametapod         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_atoi(char *str)
+#include "libft.h"
+
+int		ft_atoi(const char *str)
 {
-	int nb;
-	int minus;
+	long	nb;
+	int		minus;
 
 	minus = 1;
 	nb = 0;
 	while (*str == '\n' || *str == ' ' || *str == '\t' \
 			|| *str == '\v' || *str == '\r' || *str == '\f')
-	{
 		str++;
-	}
 	if (*str == '-' || *str == '+')
 	{
 		if (*str == '-')
 			minus = -1;
 		str++;
 	}
-	while (*str >= '0' && *str <= '9')
+	while (ft_isdigit(*str))
 	{
 		nb *= 10;
-		nb = nb + (*str - 48);
-		str++;
+		nb += ((*str++ - 48) * minus);
+		if (nb > 2147483647)
+			return (2147483647);
+		else if (nb < -2147483648)
+			return (-2147483648);
 	}
-	nb *= minus;
-	return (nb);
+	return ((int)nb);
 }

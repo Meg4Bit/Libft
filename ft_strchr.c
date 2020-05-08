@@ -14,9 +14,6 @@
 
 char	*strchr(const char *s, int c)
 {
-	char	*str;
-
-	str = (char *)s;
 	while (*s)
 	{
 		if (*s == c)

@@ -6,7 +6,7 @@
 /*   By: ametapod <pe4enko111@rambler.ru>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/08 20:04:17 by ametapod          #+#    #+#             */
-/*   Updated: 2020/05/08 21:31:31 by student          ###   ########.fr       */
+/*   Updated: 2020/05/09 02:24:25 by student          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ static char	*sep_str(char const *s, char c)
 	int		len;
 
 	len = 0;
-	while (s[len] != c)
+	while (s[len] != c && s[len])
 		len++;
 	return (ft_substr(s, 0, len));
 }

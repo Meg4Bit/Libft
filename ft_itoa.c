@@ -6,7 +6,7 @@
 /*   By: ametapod <pe4enko111@rambler.ru>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/08 21:37:06 by ametapod          #+#    #+#             */
-/*   Updated: 2020/05/08 23:55:23 by student          ###   ########.fr       */
+/*   Updated: 2020/05/09 02:12:51 by student          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,9 @@ char		*ft_itoa(int n)
 {
 	char	*str;
 	int		len;
+	int		minus;
 
+	minus = 1;
 	len = itoa_len(n);
 	str = (char *)malloc(sizeof(char) * (len + 1));
 	if (!str)
@@ -40,12 +42,12 @@ char		*ft_itoa(int n)
 	if (n < 0)
 	{
 		str[0] = '-';
-		n *= -1;
+		minus = -1;
 	}
 	str[len--] = 0;
 	while (n)
 	{
-		str[len--] = n % 10 + '0';
+		str[len--] = (n % 10) * minus + '0';
 		n /= 10;
 	}
 	return (str);

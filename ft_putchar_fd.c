@@ -14,5 +14,14 @@
 
 void	ft_putchar_fd(char c, int fd)
 {
-	write(fd, &c, 1);
+	char *buf[2];
+
+	if (c > 127)
+	{
+		buff[0] = ((unsigned char)c & 31) | 192;
+        buff[1] = ((unsigned char)c & 63) | 128;
+		write(fd, buf, 2);
+	}
+	else
+		write(fd, &c, 1);
 }

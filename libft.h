@@ -6,7 +6,7 @@
 /*   By: student <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/06 16:17:21 by student           #+#    #+#             */
-/*   Updated: 2020/05/09 12:13:46 by student          ###   ########.fr       */
+/*   Updated: 2020/05/09 19:28:16 by student          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,11 @@
 # include <unistd.h>
 # include <stdlib.h>
 
-typedef struct	s_list
+typedef struct		s_list
 {
 	void			*content;
 	struct s_list	*next;
-}				t_list;
+}					t_list;
 
 int		ft_atoi(const char *str);
 int		ft_tolower(int c);

@@ -1,27 +1,13 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ametapod <pe4enko111@rambler.ru>           +#+  +:+       +#+        */
+/*   By: student <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/05/09 17:59:23 by ametapod          #+#    #+#             */
-/*   Updated: 2020/05/09 19:22:42 by student          ###   ########.fr       */
+/*   Created: 2020/05/09 19:09:36 by student           #+#    #+#             */
+/*   Updated: 2020/05/09 19:09:38 by student          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 
-void	ft_lstadd_front(t_list **lst, t_list *new)
-{
-	if (new)
-	{
-		if (*lst)
-		{
-			new->next = *lst;
-			*lst = new;
-		}
-		else
-			*lst = new;
-	}
-}

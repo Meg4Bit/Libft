@@ -6,7 +6,7 @@
 /*   By: ametapod <pe4enko111@rambler.ru>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/09 12:00:29 by ametapod          #+#    #+#             */
-/*   Updated: 2020/05/09 12:00:29 by ametapod         ###   ########.fr       */
+/*   Updated: 2020/05/09 12:47:23 by student          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	while (*s)
+	if (s)
 	{
-		write(fd, *s, 1);
-		s++;
+		while (*s)
+			write(fd, s++, 1);
 	}
 }

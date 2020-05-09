@@ -6,13 +6,14 @@
 /*   By: student <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/06 16:17:21 by student           #+#    #+#             */
-/*   Updated: 2020/05/08 17:16:58 by student          ###   ########.fr       */
+/*   Updated: 2020/05/09 12:13:46 by student          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
+# include <unistd.h>
 # include <stdlib.h>
 
 int		ft_atoi(const char *str);

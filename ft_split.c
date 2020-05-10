@@ -41,6 +41,17 @@ static char	*sep_str(char const *s, char c)
 	return (ft_substr(s, 0, len));
 }
 
+static void	*free_arr(char **arr)
+{
+	if (arr)
+	{
+		while (*arr)
+			free (*arr++);
+		free (arr);
+	}
+	return (0);
+}
+
 char		**ft_split(char const *s, char c)
 {
 	char	**arr;
@@ -58,7 +69,7 @@ char		**ft_split(char const *s, char c)
 				s++;
 			arr[i] = sep_str(s, c);
 			if (!arr[i])
-				return (0);
+				return (free_arr(arr));
 			while (*s != c && *s)
 				s++;
 			i++;

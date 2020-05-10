@@ -22,14 +22,14 @@ OBJBONUS = $(SRCBONUS:.c=.o)
 
 all: $(NAME)
 
-$(NAME):
-	gcc -c -Wall -Wextra -Werror $(SRC) -I libft.h
+$(NAME): $(SRC) $(OBJ)
+	gcc -c -Wall -Wextra -Werror $(SRC)
 	ar rc $(NAME) $(OBJ)
 	ranlib $(NAME)
 
-bonus:
+bonus: $(SRCBONUS) $(OBJBONUS)
 	gcc -c -Wall -Wextra -Werror $(SRCBONUS)
-	ar rc $(NAME) $(OBJBONUS)
+	ar rvc $(NAME) $(OBJBONUS)
 	ranlib $(NAME)
 
 clean:
@@ -39,3 +39,5 @@ fclean: clean
 	/bin/rm -f $(NAME)
 
 re: fclean all
+
+.PHONY: all $(NAME) clean fclean re bonus

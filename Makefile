@@ -27,7 +27,7 @@ $(NAME): $(SRC) $(OBJ)
 	ar rc $(NAME) $(OBJ)
 	ranlib $(NAME)
 
-bonus: $(SRCBONUS) $(OBJBONUS)
+bonus:
 	gcc -c -Wall -Wextra -Werror $(SRCBONUS)
 	ar rvc $(NAME) $(OBJBONUS)
 	ranlib $(NAME)

@@ -6,7 +6,7 @@
 #    By: student <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/04/30 22:44:10 by student           #+#    #+#              #
-#    Updated: 2020/05/07 19:55:59 by student          ###   ########.fr        #
+#    Updated: 2020/05/11 16:09:29 by student          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,7 @@ all: $(NAME)
 
 $(NAME): $(SRC) $(OBJ)
 	gcc -c -Wall -Wextra -Werror $(SRC)
-	ar rc $(NAME) $(OBJ)
+	ar rvc $(NAME) $(OBJ)
 	ranlib $(NAME)
 
 bonus:
@@ -40,4 +40,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all $(NAME) clean fclean re bonus
+.PHONY: all clean fclean re

@@ -6,7 +6,7 @@
 /*   By: ametapod <pe4enko111@rambler.ru>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/08 20:04:17 by ametapod          #+#    #+#             */
-/*   Updated: 2020/05/09 02:24:25 by student          ###   ########.fr       */
+/*   Updated: 2020/05/11 15:40:06 by student          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,8 +46,8 @@ static void	*free_arr(char **arr)
 	if (arr)
 	{
 		while (*arr)
-			free (*arr++);
-		free (arr);
+			free(*arr++);
+		free(arr);
 	}
 	return (0);
 }

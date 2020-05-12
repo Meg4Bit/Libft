@@ -15,24 +15,23 @@
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t	i;
+	size_t	pos;
+	size_t	little_len;
 	char	*occ;
 
 	occ = (char *)big;
-	if (!*little)
+	if (!(little_len = ft_strlen(little)))
 		return (occ);
-	while (*big && len)
+	pos = 0;
+	while (occ[pos] && pos < len)
 	{
 		i = 0;
-		if (*big == little[i])
-			occ = (char *)big;
-		while (*big == little[i++] && len-- && *big)
-			big++;
-		if (i - 1 == ft_strlen(little))
-			return (occ);
-		if (len)
-			len--;
-		if (*big)
-			big++;
+		while (little[i] && occ[pos + i] == little[i] &&\
+				(pos + i) < len)
+			i++;
+		if (i == little_len)
+			return (occ + pos);
+		pos++;
 	}
 	return (0);
 }

@@ -6,7 +6,7 @@
 #    By: student <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/04/30 22:44:10 by student           #+#    #+#              #
-#    Updated: 2020/05/11 16:09:29 by student          ###   ########.fr        #
+#    Updated: 2020/05/12 22:03:13 by student          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,23 +22,22 @@ OBJBONUS = $(SRCBONUS:.c=.o)
 CFLAGS = -Wall -Wextra -Werror
 
 ifdef WITH_BONUS
-OBJ_FILES = $(OBJBONUS)
+	OBJ_FILES = $(OBJBONUS)
 else
-OBJ_FILES = $(OBJ)
+	OBJ_FILES = $(OBJ)
 endif
 
 all: $(NAME)
 
 $(NAME): $(OBJ_FILES)
-	ar rvc $(NAME) $(OBJ_FILES)
+	@ar rvc $(NAME) $(OBJ_FILES)
 	ranlib $(NAME)
 
 %.o: %.c
-    gcc -c $(CFLAGS) -o $@ $<
+	@gcc -c $(CFLAGS) -o $@ $<
 
-bonus: WITH_BONUS=1 $(OBJ_FILES)
-	ar rvc $(NAME) $(OBJ_FILES)
-	ranlib $(NAME)
+bonus:
+	$(MAKE) WITH_BONUS=1 all
 
 clean:
 	/bin/rm -f *.o
